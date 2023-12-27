@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.others {
+  margin-right: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.margin-10 {
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.hr {
+  margin: 20px 50px;
+  opacity: 0.5;
+}
+
+.center {
+  margin: 50px;
+  opacity: 0.5;
+}

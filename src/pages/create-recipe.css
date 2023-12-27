@@ -1,0 +1,87 @@
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.create-recipe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  text-align: start;
+  z-index: 1;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #e7cea6;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 400px;
+}
+
+.create-recipe h2 {
+  font-size: 30px;
+}
+
+.create-recipe input,
+.create-recipe textarea {
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.create-recipe input:focus {
+  border: none;
+  outline: none;
+}
+.create-recipe textarea:focus {
+  border: none;
+  outline: none;
+}
+
+.create-recipe form {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+form .name {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.submit {
+  padding: 8px;
+  background-color: #79d70f;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.inst {
+  margin-left: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 5px;
+  background-color: #b5c99a;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}

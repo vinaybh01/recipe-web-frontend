@@ -1,0 +1,114 @@
+.other-section {
+  position: relative;
+  top: 720px;
+}
+
+.hero-section {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 760px;
+}
+
+/* ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+} */
+
+.resp {
+  background-color: #ff7f3f;
+  color: antiquewhite;
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 9px 24px 0 rgba(0, 0, 0, 0.19);
+  margin: 15px;
+  padding: 10px;
+  color: black;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 9px 24px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+}
+
+.instructions p {
+  max-width: 400px;
+}
+
+.other-section h1 {
+  font-size: 45px;
+}
+
+.other-section p center {
+  font-size: 18px;
+  margin: 10px;
+  padding-bottom: 30px;
+  opacity: 0.7;
+}
+
+.left-side h2 {
+  font-size: 30px;
+}
+
+.right-side button {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #79d70f;
+  font-weight: 700;
+}
+
+.right-side p span {
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+}
+
+.recipe-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: auto; /* Adjust as needed */
+  margin: 0 50px;
+}
+
+.recipe {
+  width: calc(22.2 - 9px); /* Three items in a row */
+  text-align: center;
+}
+
+.recipe img {
+  width: 250px;
+  height: 250px;
+}
+
+.recipe img:hover {
+  cursor: pointer;
+}
+
+.name {
+  font-weight: 700;
+  font-size: large;
+}
+
+.name:hover {
+  cursor: pointer;
+}

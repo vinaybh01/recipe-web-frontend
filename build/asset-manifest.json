@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6cade996.css",
+    "main.js": "/static/js/main.59a125fb.js",
+    "static/media/video.mp4": "/static/media/video.32f11d74ea5dccb583dd.mp4",
+    "static/media/photo.avif": "/static/media/photo.9be67a3c090a861d5cf2.avif",
+    "static/media/chef_450064.png": "/static/media/chef_450064.a1e7277aca6d1e1f731e.png",
+    "index.html": "/index.html",
+    "main.6cade996.css.map": "/static/css/main.6cade996.css.map",
+    "main.59a125fb.js.map": "/static/js/main.59a125fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cade996.css",
+    "static/js/main.59a125fb.js"
+  ]
+}

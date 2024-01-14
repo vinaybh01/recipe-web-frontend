@@ -44,19 +44,19 @@ export const Home = () => {
     fetchSavedRecipes();
   }, []);
 
-  const saveRecipe = async (recipeID) => {
-    try {
-      const response = await axios.put(`{URL}/recipes`, {
-        recipeID,
-        userID,
-      });
-      setSavedRecipes(response.data.savedRecipes);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const saveRecipe = async (recipeID) => {
+  //   try {
+  //     const response = await axios.put(`{URL}/recipes`, {
+  //       recipeID,
+  //       userID,
+  //     });
+  //     setSavedRecipes(response.data.savedRecipes);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
-  const isRecipeSaved = (id) => savedRecipes.includes(id);
+  // const isRecipeSaved = (id) => savedRecipes.includes(id);
 
   return (
     <>
@@ -73,45 +73,6 @@ export const Home = () => {
             community of passionate home cooks!
           </center>
         </p>
-        {/* Recipes for next page  */}
-        {/* <div className="res">
-          {recipes.map((recipe) => (
-            <div key={recipe._id} className="resp">
-              <div className="left-side">
-                <h2>{recipe.name}</h2>
-                <img src={recipe.imageUrl} alt={recipe.name} />
-              </div>
-              <div className="right-side">
-                <div className="ingredients">
-                  <p>
-                    <span>Ingredients:</span>
-                  </p>
-                  <p>{recipe.ingredients[0]}</p>
-                  <p> {recipe.ingredients[1]}</p>
-                  <p> {recipe.ingredients[2]}</p>
-                  <p> {recipe.ingredients[3]}</p>
-                </div>
-                <div className="instructions">
-                  <p>
-                    <span>Instructions:</span>
-                  </p>
-                  <p>{recipe.instructions}</p>
-                </div>
-
-                <p>
-                  <span>Cooking Time:</span>
-                </p>
-                <p>{recipe.cookingTime} minutes</p>
-                <button
-                  onClick={() => saveRecipe(recipe._id)}
-                  disabled={isRecipeSaved(recipe._id)}
-                >
-                  {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
-                </button>
-              </div>
-            </div>
-          ))}
-        </div> */}
 
         {loading ? (
           <Loading />

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import "./auth.css";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export const Auth = () => {
   return (
@@ -27,6 +28,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const URL = process.env.REACT_APP_BASIC_URL;
   const navigate = useNavigate();
 
@@ -34,6 +36,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
+      setLoading(true);
       const result = await axios.post(`${URL}/auth/login`, {
         username,
         password,
@@ -41,12 +44,14 @@ const Login = () => {
 
       setCookies("access_token", result.data.token);
       window.localStorage.setItem("userID", result.data.userID);
+      setLoading(false);
       navigate("/");
     } catch (error) {
       setError("Incorrect username or password");
       setTimeout(() => {
         setError("");
       }, 2500);
+      setLoading(false);
       console.error(error);
     }
   };
@@ -75,7 +80,7 @@ const Login = () => {
           />
         </div>
         <button className="button-submit" type="submit">
-          Login
+          {loading ? <LoadingSpinner /> : "Login"}
         </button>
       </form>
     </div>
@@ -86,28 +91,36 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const URL = process.env.REACT_APP_BASIC_URL;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     if (!username || !password) {
       setError("Username and password are required");
       setTimeout(() => {
         setError("");
       }, 2500);
+      setLoading(false);
       return;
     }
 
     try {
+      setLoading(true);
       await axios.post(`${URL}/auth/register`, {
         username,
         password,
       });
+      setLoading(false);
       alert("Registration Completed! Now login.");
-      window.location.reload();
+      navigate("/");
     } catch (error) {
-      console.error(error);
+      setError("Username has taken");
+      setTimeout(() => {
+        setError("");
+      }, 2500);
+      setLoading(false);
     }
   };
 
@@ -135,7 +148,7 @@ const Register = () => {
           />
         </div>
         <button className="button-submit" type="submit">
-          Register
+          {loading ? <LoadingSpinner /> : "Register"}
         </button>
       </form>
     </div>
